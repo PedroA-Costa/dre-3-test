@@ -14,7 +14,7 @@ x-airflow-common:
     - ./dag:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-  user: "5000"
+  user: "root"
   depends_on:
     &airflow-common-depends-on
     redis:
@@ -28,7 +28,7 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: admin
+      POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
@@ -165,3 +165,8 @@ services:
 
 volumes:
   postgres-db-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /var/lib/postgresql/data
