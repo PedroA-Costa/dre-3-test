@@ -13,3 +13,5 @@ No smooth.py só foi necessário uma alteração:
 def smooth() faltou o :
 
 Criei também um executar.sh caso queira automatizar a instalação e subida dos serviços. Também há disponível a criação da pasta para o postgres caso haja interesse em subir uma pasta apartada.
+
+Os diagramas se encontram dentro da pasta diagrama. Tanto a estrutura atual quanto a estrutura aws.

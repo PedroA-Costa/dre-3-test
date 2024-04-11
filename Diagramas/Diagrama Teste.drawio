@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2024-04-11T01:14:15.061Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="udVL0vHVhzzTd3jfAW0a" version="24.2.3" type="device">
+  <diagram name="Página-1" id="FlxYaRtAuqHQQOqIsTKH">
+    <mxGraphModel dx="1122" dy="666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start-terminal" value="start-terminal" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWebserver" value="AirflowWebserver" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowScheduler" value="AirflowScheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWorker" value="AirflowWorker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowTriggerer" value="AirflowTriggerer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowInit" value="AirflowInit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowCLI" value="AirflowCLI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Postgres" value="Postgres" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="630" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis" value="Redis" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Flower" value="Flower" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="start-terminal--AirflowWebserver" edge="1" parent="1" source="start-terminal" target="AirflowWebserver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWebserver--AirflowScheduler" edge="1" parent="1" source="AirflowWebserver" target="AirflowScheduler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowScheduler--AirflowWorker" edge="1" parent="1" source="AirflowScheduler" target="AirflowWorker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWorker--AirflowTriggerer" edge="1" parent="1" source="AirflowWorker" target="AirflowTriggerer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowTriggerer--AirflowInit" edge="1" parent="1" source="AirflowTriggerer" target="AirflowInit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowInit--AirflowCLI" edge="1" parent="1" source="AirflowInit" target="AirflowCLI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowInit--Postgres" style="strokeColor=#0000FF;" edge="1" parent="1" source="AirflowInit" target="Postgres">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowInit--Redis" edge="1" parent="1" source="AirflowInit" target="Redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowInit--Flower" style="strokeColor=#00CC00;" edge="1" parent="1" source="AirflowInit" target="Flower">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Postgres--AirflowWebserver" style="strokeColor=#0000FF;" edge="1" parent="1" source="Postgres" target="AirflowWebserver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Postgres--AirflowScheduler" style="strokeColor=#0000FF;" edge="1" parent="1" source="Postgres" target="AirflowScheduler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Postgres--AirflowWorker" style="strokeColor=#0000FF;" edge="1" parent="1" source="Postgres" target="AirflowWorker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Postgres--AirflowTriggerer" style="strokeColor=#0000FF;" edge="1" parent="1" source="Postgres" target="AirflowTriggerer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis--AirflowWebserver" style="strokeColor=#CC0000;" edge="1" parent="1" source="Redis" target="AirflowWebserver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis--AirflowScheduler" style="strokeColor=#CC0000;" edge="1" parent="1" source="Redis" target="AirflowScheduler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis--AirflowWorker" style="strokeColor=#CC0000;" edge="1" parent="1" source="Redis" target="AirflowWorker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis--AirflowTriggerer" style="strokeColor=#CC0000;" edge="1" parent="1" source="Redis" target="AirflowTriggerer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Redis--AirflowInit" style="strokeColor=#CC0000;" edge="1" parent="1" source="Redis" target="AirflowInit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWebserver--Flower" style="strokeColor=#00CC00;" edge="1" parent="1" source="AirflowWebserver" target="Flower">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowScheduler--Flower" style="strokeColor=#00CC00;" edge="1" parent="1" source="AirflowScheduler" target="Flower">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowWorker--Flower" style="strokeColor=#00CC00;" edge="1" parent="1" source="AirflowWorker" target="Flower">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AirflowTriggerer--Flower" style="strokeColor=#00CC00;" edge="1" parent="1" source="AirflowTriggerer" target="Flower">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
